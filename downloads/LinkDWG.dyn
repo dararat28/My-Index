@@ -1,0 +1,690 @@
+{
+  "Uuid": "60ea7799-9106-4d33-a35b-5ad5a3350843",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "LinkDWG",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "02d1aa42-5581-437d-85e8-d0c811bbec4f",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "e84fe02a97004d778aacf7a76be8c912",
+      "Inputs": [
+        {
+          "Id": "89ec06ab7acf43aa84ca8c12e2c97a11",
+          "Name": "LinkedDWG",
+          "Description": "Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "560b8105cae94791894c199f4fb03ae9",
+          "Name": "VisibleAutoCAD",
+          "Description": "bool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "54fe610411bd4a2583b5d8ffabee2f10",
+          "Name": "[0] COM Document",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5c27649c398c4aec820b175aafc3aad0",
+          "Name": "[1] COM Text/MTexts",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f2b558656d5c403fb4374d31f99eda05",
+          "Name": "[2] COM NestAttributes",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "58a0aa9257844314aaf18729e85128d5",
+          "Name": "[3] COM Hatches",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the particular COM objects (Text/MText/Attribute/Hatch) inside a linked DWG by opening and reading data via AutoCAD running in background"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "f6dc06ec-a86d-4f91-8c50-bddcca8dc70f-0010f018"
+      ],
+      "Id": "bcd2239505ed457faaa22dd9bd90317c",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "aadcf877c0cc4edc8adba8d8fc99f5c7",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "571c801f6b81496aa4bf00fbeaeb74b4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1c6566b7eea7465dbdc25eaf723af0dc",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "0a1fa2d8931f453489cdf103e1339c8d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a8d9c68d3ea74b57831ce7e2895ba363",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "003da7d7-57cf-4cfa-b92b-dd84b7a97cff",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "78f423b551a148ecaea9fa457ce3bd16",
+      "Inputs": [
+        {
+          "Id": "be6d52e812fb42dba66da9f4f32c3424",
+          "Name": "Run",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2dc6139c5d1848ea83bd08d450a1730b",
+          "Name": "COM_DBXDocument",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "60e0f663ef544815b1b3f63cba14aa33",
+          "Name": "LayoutName",
+          "Description": "string\nDefault value : \"ModelSpace\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d0e8a3ad93c2482e9d2e5543dbd6cea9",
+          "Name": "[0] COM Points",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3adc52b262654f5d9be6259691707663",
+          "Name": "[1] COM Lines",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b340007baf8d432aa27eed0d9d1b85a8",
+          "Name": "[2] COM Arcs",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8d8a53ebef1348b5914d91c365325350",
+          "Name": "[3] COM Circles",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1666f19301f48709d65d34a534b1a47",
+          "Name": "[4] COM Ellipses",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d959741630c1459cacf10bda242649cf",
+          "Name": "[5] COM Poly/Spline",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd44324bf2d64fbc90672721f1f3f4b2",
+          "Name": "[6] COM 3DFace/Solids",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9669ba7b515f480cb1420b9b908cbbab",
+          "Name": "[7] COM Meshes",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3a523ec848e3415eae8b6dd5a4fbea64",
+          "Name": "[8] COM Regions",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b544cc6643fe4b078b019b2bf1276eeb",
+          "Name": "[9] COM Hatches",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1224ffd0bbca492a85dbaa7f5a95e971",
+          "Name": "[10] COM 3DSolids",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c82e3f71cd124ddbb612ee1d0ba3eb6c",
+          "Name": "[11] COM Texts",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "85886bcaf41e47af8644b1be3089c62c",
+          "Name": "[12] COM MTexts",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74317f9498874e738bb28155ca12c023",
+          "Name": "[13] COM Blocks/MInserts",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ed61e35ea70b426687a8d0fb4c2d3b06",
+          "Name": "[14] COM NestAttributes",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0d90799a387648918e1cc121dfe245f4",
+          "Name": "[15] COM AttributeDefinitions",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9130703914c84a27a171606dd7694780",
+          "Name": "[16] COM AcDbTables",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b85c5d159d1042e7aebb2a57c40f3d9e",
+          "Name": "[17] COM Leaders",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "96cf50058b2441809172cb6c9e0642c6",
+          "Name": "[18] COM MLeaders",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "318af9a8fa974fb9a56c8cd9dfa70754",
+          "Name": "[19] COM Others",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c93086a412c4d8ea802cba89c15492e",
+          "Name": "[20] COM AllObjects",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get all COM Objects from current DBX drawing"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Function, DynamoCore",
+      "FunctionSignature": "36954a1f-1673-42d1-8f79-78da77167e91",
+      "FunctionType": "Graph",
+      "NodeType": "FunctionNode",
+      "Id": "97624d68f7dc41fb93baa717b5cd5e2b",
+      "Inputs": [
+        {
+          "Id": "e70ed7b0e5bf4275b88e0aa8b8ace00c",
+          "Name": "COM_Block",
+          "Description": "var[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "156caa41a55f4131ad007e11650f709e",
+          "Name": "[0] BlockName",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0cef0ea219264195aa6d594dfe8cbe07",
+          "Name": "[1] Layer",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "75f3815d5736447e93180bfb4af64bbc",
+          "Name": "[2] InsertionPoint",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "687af0415e8b42188fb61a2ec451ebc2",
+          "Name": "[3] RotationInRadians",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "72499bafe11446b6823297e2410cd312",
+          "Name": "[4] X ScaleFactor",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dd9f619ad2a449bf9d495be7d187fb3d",
+          "Name": "[5] Y ScaleFactor",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a69bac59fd684242a6ccee49bd450750",
+          "Name": "[6] Z ScaleFactor",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0b683b5a86bb467db60201597bd3e217",
+          "Name": "[7] COM NestAttributes",
+          "Description": "return value",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get COM Block properties"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.String.Contains@string,string,bool",
+      "Id": "dba93ef8a1a34e3aaf7f78946ecfa0f6",
+      "Inputs": [
+        {
+          "Id": "64158660d60844c09128949577a0be6b",
+          "Name": "string",
+          "Description": "String to search in\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "34ce6d637a494d19bf7c2bb581a12172",
+          "Name": "searchFor",
+          "Description": "Substring to search for\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a17f7f50723a4ca2aa38a2b86253f5a5",
+          "Name": "ignoreCase",
+          "Description": "Whether or not comparison takes case into account\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f1a21ed834d34deca7dfc078e0e6105e",
+          "Name": "bool",
+          "Description": "Whether the string contains the substring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines if the given string contains the given substring.\n\nString.Contains (string: string, searchFor: string, ignoreCase: bool = false): bool"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "54fe610411bd4a2583b5d8ffabee2f10",
+      "End": "2dc6139c5d1848ea83bd08d450a1730b",
+      "Id": "7badac97d20e49b28781b8ed3cb6400b",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "aadcf877c0cc4edc8adba8d8fc99f5c7",
+      "End": "89ec06ab7acf43aa84ca8c12e2c97a11",
+      "Id": "bc35e1ca0fc24100859a86516e3422f2",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "1c6566b7eea7465dbdc25eaf723af0dc",
+      "End": "560b8105cae94791894c199f4fb03ae9",
+      "Id": "315cdb976b004ae482f00e3f45c9f349",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "a8d9c68d3ea74b57831ce7e2895ba363",
+      "End": "be6d52e812fb42dba66da9f4f32c3424",
+      "Id": "e08af92ef96c4a859f2f6f338f11fa87",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "74317f9498874e738bb28155ca12c023",
+      "End": "e70ed7b0e5bf4275b88e0aa8b8ace00c",
+      "Id": "e016a9caeaed4a95b386197c1b22bd79",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "156caa41a55f4131ad007e11650f709e",
+      "End": "64158660d60844c09128949577a0be6b",
+      "Id": "a59c55c4e5af4e228a2091dba1a28713",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [
+    "02d1aa42-5581-437d-85e8-d0c811bbec4f",
+    "003da7d7-57cf-4cfa-b92b-dd84b7a97cff",
+    "36954a1f-1673-42d1-8f79-78da77167e91"
+  ],
+  "NodeLibraryDependencies": [
+    {
+      "Name": "LinkDWG",
+      "Version": "0.3.91",
+      "ReferenceType": "Package",
+      "Nodes": [
+        "e84fe02a97004d778aacf7a76be8c912",
+        "78f423b551a148ecaea9fa457ce3bd16",
+        "97624d68f7dc41fb93baa717b5cd5e2b"
+      ]
+    }
+  ],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "ImportInstance.GetCOMObjects",
+        "ShowGeometry": true,
+        "Id": "e84fe02a97004d778aacf7a76be8c912",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1121.6364255532146,
+        "Y": 936.62664326309607
+      },
+      {
+        "Name": "Select Model Element",
+        "ShowGeometry": true,
+        "Id": "bcd2239505ed457faaa22dd9bd90317c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 715.87831923686917,
+        "Y": 912.58280406504582
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "571c801f6b81496aa4bf00fbeaeb74b4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 775.8822243978957,
+        "Y": 1124.5271496356211
+      },
+      {
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Id": "0a1fa2d8931f453489cdf103e1339c8d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1271.7047865555933,
+        "Y": 672.06853575637274
+      },
+      {
+        "Name": "ObjectDBX.GetCOMObjects",
+        "ShowGeometry": true,
+        "Id": "78f423b551a148ecaea9fa457ce3bd16",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1809.3864685073086,
+        "Y": 815.44188756273888
+      },
+      {
+        "Name": "ActiveX.BlockProperties",
+        "ShowGeometry": true,
+        "Id": "97624d68f7dc41fb93baa717b5cd5e2b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2548.9653192073106,
+        "Y": 1462.7885355869582
+      },
+      {
+        "Name": "String.Contains",
+        "ShowGeometry": true,
+        "Id": "dba93ef8a1a34e3aaf7f78946ecfa0f6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3080.2725428054637,
+        "Y": 1380.7336200444645
+      }
+    ],
+    "Annotations": [],
+    "X": -412.0075534390478,
+    "Y": -127.19371252593521,
+    "Zoom": 0.4136391526713894
+  }
+}
