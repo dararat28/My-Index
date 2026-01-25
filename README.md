@@ -198,6 +198,12 @@
       <a href="https://dararat28.github.io/PDF-Excel-Checker/" target="_blank">Open Project</a>
     </div>
 
+    <div class="card">
+      <h3>INH_CAD-vs-Revit-Check-BOM</h3>
+      <p>A web-based tool to compare and verify BOM quantities between CAD and Revit.</p>
+      <a href="https://dararat28.github.io/INH_CAD-vs-Revit-Check-BOM/" target="_blank">Open Project</a>
+    </div>
+
   </div>
 </div>
 
