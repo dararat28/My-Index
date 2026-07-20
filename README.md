@@ -204,11 +204,11 @@
       <a href="https://dararat28.github.io/INH_CAD-vs-Revit-Check-BOM/" target="_blank">Open Project</a>
     </div>
 
-        <div class="card">
-      <h3>INH_INH_Ticket-Number-Extractor</h3>
-      <p>A web-for extracting Ticket Numbers from PDFs and exporting them to Excel.</p>
-      <a href="https://dararat28.github.io/INH_Ticket-Number-Extractor/" target="_blank">Open Project</a>
-    </div>
+    <div class="card">
+    <h3>INH_INH_Ticket-Number-Extractor</h3>
+    <p>A web-for extracting Ticket Numbers from PDFs and exporting them to Excel.</p>
+    <a href="https://dararat28.github.io/INH_Ticket-Number-Extractor/" target="_blank">Open Project</a>
+  </div>
 
   </div>
 </div>
